@@ -1,2 +1,2 @@
 # ml-helio.github.io
-Machine Learning in Heliophysics community
+Website of the ML-Helio conference
