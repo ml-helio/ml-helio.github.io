@@ -27,7 +27,14 @@
                                <a href="#Publications">Publications</a>&nbsp;&nbsp;
                                 <a href="#Committee">Committee</a>&nbsp;&nbsp;
                                 <a href="#Venue">Venue & Travel</a>&nbsp;&nbsp;
-                                <a href="./2019/index_2019.html">Past editions</a>&nbsp;&nbsp;
+                                <div class="dropdown">
+                                    <button onclick="myFunction()" class="dropbtn">Past Editions</button>
+                                        <div id="myDropdown" class="dropdown-content">
+                                            <a href="./2019/index_2019.html">2019</a>
+                                            <a href="./index_2022.html">2022</a>
+                                        </div>
+                                </div>
+                                
                                 <a href="#Sponsors">Sponsors</a>&nbsp;&nbsp;
                                 <a href="#Contact">Contact</a>&nbsp;&nbsp;
                                 
@@ -37,6 +44,28 @@
 
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
+			<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+			
 		<!-- Banner -->
 			<section id="banner">
 				<h2>Machine Learning in Heliophysics</h2>
@@ -126,8 +155,8 @@ We expect all the participants of Machine Learning in Heliophysics to follow our
         <section id="four" class="wrapper style3 special">
 		<div class="container">
                         <header class="major">
-			<a name="Dates"></a>
-                            <h2>Sponsors</h2>
+        <a name="Sponsors"></a>
+            <h2>Sponsors</h2>
                         </header>
                 </div>
         </section>
@@ -182,6 +211,8 @@ Analytics"></a></div></noscript>
 
 			<!-- Default Statcounter code for ML-helio-2019
 https://event.cwi.nl/ml-helio-2019/ -->
+
+
 
 
 	</body>
