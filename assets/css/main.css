@@ -3358,14 +3358,14 @@
 .show {display:block;}
 		
 
-.sponsor-logos {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;         /* space between logos */
-	flex-wrap: wrap;   /* allows wrapping on smaller screens */
-	margin-top: 20px;
+.sponsor-logos img {
+	height: auto;
+	width: auto;
+	max-height: 100px;   /* uniform size */
+	max-width: 200px;    /* cap width */
+	object-fit: contain; /* keeps proportions */
 }
+
 
 .sponsor-logos img {
 	max-height:200px;  /* keeps logos uniform */
@@ -3380,10 +3380,10 @@
 }
 
 .program-embed iframe {
-	width: 100%;
-	height: 600px;      /* adjust height as you like */
+	width: 100%;         /* responsive */
+	min-height: 80vh;    /* fills 80% of viewport height */
 	border: 1px solid #ccc;
 	border-radius: 8px;
-	overflow: auto;     /* ensures scrollbars appear when needed */
 }
+
 
